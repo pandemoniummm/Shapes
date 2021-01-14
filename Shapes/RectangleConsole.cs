@@ -8,8 +8,10 @@ namespace Shapes
 {
     public class RectangleConsole : Rectangle
     {
-        public RectangleConsole(int sideLength, int sideWidth, char pen) : base(sideLength, sideWidth, pen)
+        private readonly char pen;
+        public RectangleConsole(int sideLength, int sideWidth, char pen) : base(sideLength, sideWidth)
         {
+            this.pen = pen;
         }
         public override void Draw()
         {

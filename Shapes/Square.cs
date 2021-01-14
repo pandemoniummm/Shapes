@@ -9,12 +9,10 @@ namespace Shapes
     public abstract class Square : Shape
     {
         protected readonly int sideLength;
-        protected readonly char pen;
        
-        public Square(int sideLength, char pen)
+        public Square(int sideLength)
         {
-            this.sideLength = sideLength;
-            this.pen = pen;
+            this.sideLength = sideLength;          
         }
         public abstract void Draw();
 

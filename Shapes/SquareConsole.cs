@@ -8,8 +8,10 @@ namespace Shapes
 {
     public class SquareConsole : Square
     {
-        public SquareConsole(int sideLength, char pen) : base(sideLength, pen)
+        private readonly char pen;
+        public SquareConsole(int sideLength, char pen) : base(sideLength)
         {
+            this.pen = pen;
         }
         public override void Draw()
         {

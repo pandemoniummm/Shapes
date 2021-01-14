@@ -8,13 +8,11 @@ namespace Shapes
 {
     public abstract class Circle : Shape
     {
-        protected readonly int radius;
-        protected readonly char pen;
+        protected readonly int radius;     
 
-        public Circle(int radius, char pen)
+        public Circle(int radius)
         {
-            this.radius = radius;
-            this.pen = pen;
+            this.radius = radius;         
         }
         public abstract void Draw();
 

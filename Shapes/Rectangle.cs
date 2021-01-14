@@ -9,14 +9,12 @@ namespace Shapes
     public abstract class Rectangle : Shape
     {
         protected readonly int sideLength;
-        protected readonly int sideWidth;
-        protected readonly char pen;
+        protected readonly int sideWidth;      
    
-        public Rectangle(int sideLength, int sideWidth, char pen)
+        public Rectangle(int sideLength, int sideWidth)
         {
             this.sideLength = sideLength;
-            this.sideWidth = sideWidth;
-            this.pen = pen;
+            this.sideWidth = sideWidth;           
         }
         public abstract void Draw();
        

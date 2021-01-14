@@ -8,8 +8,10 @@ namespace Shapes
 {
     public class CircleConsole : Circle
     {
-        public CircleConsole(int radius, char pen) : base(radius, pen)
+        private readonly char pen;
+        public CircleConsole(int radius, char pen) : base(radius)
         {
+            this.pen = pen;
         }
         public override void Draw()
         {
