@@ -10,9 +10,9 @@ namespace Shapes
     {
         static void Main(string[] args)
         {
-            Shape square = new Square(4, '#');
-            Shape rectangle = new Rectangle(5,7, '$');
-            Shape circle = new Circle(3, '@');
+            Shape square = new SquareConsole(4, '#');
+            Shape rectangle = new RectangleConsole(5,7, '$');
+            Shape circle = new CircleConsole(3, '@');
 
             var shapes = new List<Shape> {square, rectangle, circle };
 

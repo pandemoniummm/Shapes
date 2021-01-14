@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Shapes
 {
-    public class Rectangle : Shape
+    public abstract class Rectangle : Shape
     {
-        private readonly int sideLength;
-        private readonly int sideWidth;
-        private readonly char pen;
+        protected readonly int sideLength;
+        protected readonly int sideWidth;
+        protected readonly char pen;
    
         public Rectangle(int sideLength, int sideWidth, char pen)
         {
@@ -18,18 +18,8 @@ namespace Shapes
             this.sideWidth = sideWidth;
             this.pen = pen;
         }
-        public void Draw()
-        {
-            for (int i = 0; i < sideWidth; i++)
-            {
-                for (int j = 0; j < sideLength; j++)
-                {
-                    Console.Write(pen + " ");
-                }
-                Console.WriteLine();
-            }
-        }
-
+        public abstract void Draw();
+       
         public int GetArea()
         {
             return sideLength * sideWidth;

@@ -6,27 +6,17 @@ using System.Threading.Tasks;
 
 namespace Shapes
 {
-    public class Square : Shape
+    public abstract class Square : Shape
     {
-        private readonly int sideLength;
-        private readonly char pen;
+        protected readonly int sideLength;
+        protected readonly char pen;
        
         public Square(int sideLength, char pen)
         {
             this.sideLength = sideLength;
             this.pen = pen;
         }
-        public void Draw()
-        {
-            for (int i = 0; i < sideLength; i++)
-            {
-                for (int j = 0; j < sideLength; j++)
-                {
-                    Console.Write(pen + " ");
-                }
-                Console.WriteLine();
-            }
-        }
+        public abstract void Draw();
 
         public int GetArea()
         {

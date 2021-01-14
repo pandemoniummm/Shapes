@@ -6,27 +6,17 @@ using System.Threading.Tasks;
 
 namespace Shapes
 {
-    public class Circle : Shape
+    public abstract class Circle : Shape
     {
-        private readonly int radius;
-        private readonly char pen;
+        protected readonly int radius;
+        protected readonly char pen;
 
         public Circle(int radius, char pen)
         {
             this.radius = radius;
             this.pen = pen;
         }
-        public void Draw()
-        {
-            Action<int, char> makeLine = (count, pen) => Enumerable.Range(0, count).ToList().ForEach(x => Console.Write(pen + " "));         
-                       
-            for (int i = 0; i < radius * 2 + 1; i++)
-            {
-                makeLine(i > radius ? i - radius : radius - i, ' ');
-                makeLine(i > radius ? (radius * 2 - i) * 2 + 1 : i * 2 + 1, pen);
-                Console.WriteLine();
-            }
-        }
+        public abstract void Draw();
 
         public int GetArea()
         {
